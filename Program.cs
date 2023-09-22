@@ -265,15 +265,44 @@
 //else Console.WriteLine("Неопределённость");
 #endregion 2.19
 
-string[] names = { "Stys", "Lox", "Pidr","Stoker","Fuckin_Slave" };
+#region попытки познать LinQ
+//string[] names = { "Stys", "Lox", "Pidr","Stoker","Fuckin_Slave" };
 
-foreach (string name in names) 
-    if (name.Contains('S')) Console.WriteLine(name);
+//foreach (string name in names) 
+//    if (name.Contains('S')) Console.WriteLine(name);
 
-names = names
-    .Where(x => x.Contains('S'))
-    .Select(x => x.Replace('S', '_'))
-    .ToArray();
+//names = names
+//    .Where(x => x.Contains('S'))
+//    .Select(x => x.Replace('S', '_'))
+//    .ToArray();
 
-foreach (string name in names) 
-    Console.WriteLine(name);
+//foreach (string name in names) 
+//    Console.WriteLine(name);
+#endregion попытки познать LinQ
+
+#region 2.20
+
+Console.WriteLine("Введите e");
+double e = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите f");
+double f = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите g");
+double g = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите h");
+double h = Convert.ToDouble(Console.ReadLine());
+
+if (f != 0) 
+    Console.WriteLine($"Функция a = {Math.Sqrt(Math.Pow(Math.Abs(e - 3/f),3) + g)}");
+else 
+    Console.WriteLine("Неопределённость, введите значение f не равное 0");
+
+Console.WriteLine($"Функция b = {Math.Sin(e)+Math.Pow(Math.Cos(h),2)}");
+
+if (e*f != 3)
+    Console.WriteLine($"Функция c = {33 * g / (e * f - 3)}");
+else
+    Console.WriteLine("Неопределённость, введите иные значения e и f");
+
+// Console.WriteLine((f!=0)?$"Функция а = {f}":$"Неопределенность");
+
+#endregion 2.20
